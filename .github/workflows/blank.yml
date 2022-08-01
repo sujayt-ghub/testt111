@@ -25,11 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: create config
-        run: |
-          echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
-          cat ${HOME}/.kube/config
+
           
 
       # Runs a set of commands using the runners shell
