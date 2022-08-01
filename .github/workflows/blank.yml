@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: create config
         run: |
-          mkdir ${HOME}/.kube
+     # mkdir ${HOME}/.kube
           echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
           cat ${HOME}/.kube/config
           
